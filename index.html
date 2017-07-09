@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularRank</title>
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="libraries/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body>
+<header class="main-header">
+    <div class="header-contact">
+        <div class="my-email"><i class="glyphicon glyphicon-envelope"></i> dlceynowa@gmail.com</div>
+        <div class="my-phone-number"><i class="glyphicon glyphicon-earphone"></i> 516 482 238</div>
+    </div>
+    <div class="header-inner">
+        <div class="header-logo">
+            <img src="img/logo.jpg" alt="logo" id="logo" class="header-logo-img">
+        </div>
+        <div class="title-app">
+            <h1 class="title-name"> AngularRank </h1>
+            <h2 class="title-welcome"> Let's see which developer has made the most <br class="break-line-for-tablet">
+                contributions! </h2>
+        </div>
+    </div>
+
+</header>
+<section class="rank">
+    <div class="row column-title" id="rankHeader">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">Angular Repositories</div>
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">Contributions and Users</div>
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">Filter by Contributions</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+            <div id="repos">
+            </div>
+        </div>
+        <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5">
+            <div id="users"></div>
+        </div>
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+            <div id="filtrField" class="filterContributors">
+                <div>
+                    <input type="text" id="minValue" placeholder="minimum" maxlength="5"
+                           class="form-control input-sm input-min"/>
+                    <input type="text" id="maxValue" placeholder="maximum" maxlength="5"
+                           class="form-control input-sm input-min"/>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" onclick="filterContributors()" class="btn btn-default">Filter</button>
+                    <button type="submit" onclick="unfilter()" class="btn btn-default">Unfilter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="not-working-on-mobile">
+    <h3 class="not-working-text text-center">UWAGA, W TEJ CHWILI APLIKACJA DZIAŁA TYLKO NA EKRANACH WIĘKSZYCH OD 767
+        PIKSELI! ZA UTRUDNIENIA PZEPRSZAMY!</h3>
+</section>
+<footer>
+    <p class="copyright">&copy; AngularRank 2017 </p>
+    <ul id="contactList">
+        <li>
+            <a href="https://www.facebook.com/dawid.ceynowa.5" target="_blank" class="fa fa-facebook"
+               aria-hidden="true"></a>
+        </li>
+        <li>
+            <a href="https://pl.linkedin.com/in/dawid-ceynowa" target="_blank" class="fa fa-linkedin-square"
+               aria-hidden="true"></a>
+        </li>
+    </ul>
+    <p id="author"> Site by <br/> <b> Dawid Ceynowa</b></p>
+</footer>
+
+
+<script src="repos.js" type="text/javascript"></script>
+</body>
+
+</html>

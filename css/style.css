@@ -1,0 +1,265 @@
+font-face {
+    font-family: headerFont;
+    src: url(fonts/saxmono.ttf);
+}
+
+font-face {
+    font-family: contactFont;
+    src: url(fonts/CinzelDecorative-Regular.ttf);
+}
+
+font-face {
+    font-family: rankingFont;
+    src: url("fonts/Envy Code R.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #ebebe0;
+}
+
+/*header*/
+.main-header {
+    background-color: #001a00;
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding: 5px 15px;
+    word-spacing: -6px;
+    font: italic 13px contactFont;
+}
+
+.header-contact i {
+    padding-right: 10px;
+}
+
+.my-email {
+    padding-bottom: 8px;
+    display: flex;
+}
+
+.header-inner {
+    display: flex;
+    font: bold 45px headerFont;
+    line-height: 150%;
+    padding: 15px;
+}
+
+.header-logo {
+    box-sizing: border-box;
+}
+
+.title-name {
+    font-size: 55px;
+    padding-top: 10px;
+    padding-left: 70px;
+}
+
+.title-welcome {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.break-line-for-tablet {
+    display: none;
+}
+
+/*section rank*/
+.column-title {
+    font: bold 20px headerFont;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.row {
+    margin-right: 0;
+    margin-right: 0;
+}
+
+div [id^="user"] {
+    color: blue;
+    font: normal 16px rankingFont;
+}
+
+#users {
+    margin-top: -15px;
+    text-align: center;
+}
+
+.contributorsName {
+    text-align: left;
+}
+
+.contributionsNumber {
+    text-align: right;
+}
+
+.smallButton {
+    height: 20px;
+    text-align: center;
+    padding: 0px 2px 1px 2px;
+}
+
+.mediumButton {
+    height: 20px;
+    text-align: center;
+    padding: 0px 2px 1px 2px;
+}
+
+.input-min,
+.input-max {
+    width: 75%;
+}
+
+.not-working-on-mobile {
+    display: none;
+}
+
+/*footer*/
+footer {
+    background-color: black;
+    min-height: 70px;
+    color: white;
+    font: normal 14px "Courier New";
+    padding: 20px;
+    overflow: visible;
+}
+
+.copyright {
+    float: left;
+}
+
+#contactList {
+    width: 100px;
+    position: relative;
+    float: right;
+}
+
+#contactList li {
+    list-style: none;
+    cursor: pointer;
+    border-right: 1px solid white;
+    letter-spacing: 0.02em;
+    padding-right: 7px;
+    margin-right: 7px;
+    float: left;
+}
+
+#contactList li:last-child {
+    border-right: none;
+}
+
+#contactList a {
+    cursor: pointer;
+}
+
+#contactList a:link,
+a:visited {
+    color: white;
+}
+
+#contactList a:hover {
+    color: blue;
+}
+
+#author {
+    float: right;
+    position: relative;
+    right: 40px;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .not-working-on-mobile {
+        display: block;
+        font-family: cursive;
+    }
+
+    .header-contact,
+    .rank,
+    #contactList,
+    #author {
+        display: none
+    }
+
+    .header-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .title-name {
+        font-size: 35px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .title-welcome {
+        font-size: 17px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .not-working-text {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+    .header-inner {
+        padding-bottom: 0;
+    }
+
+    .header-logo-img {
+        height: 135px;
+    }
+
+    .title-name {
+        font-size: 40px;
+        padding-left: 40px;
+    }
+
+    .title-welcome {
+        font-size: 20px;
+    }
+
+    .break-line-for-tablet {
+        display: inline-block;
+    }
+
+    .smallButton {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1023px) {
+    .mediumButton {
+        width: 120px;
+    }
+
+    .smallButton {
+        width: 100px;
+    }
+}
